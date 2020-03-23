@@ -10,10 +10,11 @@ export default createGlobalStyle`
 
   html, body, #root{
     min-height: 100%;
+    font-family: Roboto , Arial, Helvetica, sans-serif;
   }
 
   body{
-    background: #151413;
+    background: #121212;
     -webkit-font-smoothing: antialiased !important;
   }
 `;
