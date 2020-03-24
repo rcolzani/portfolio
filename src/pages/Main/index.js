@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { Title, Container, PictureBorder, RepositoryList, SocialMedias, SocialMedia, RepositoryTitle, RepositoryDescription, RepositoryContainer } from './styles'
+import {
+  Title, Subtitle, Container, PictureBorder, RepositoryList,
+  SocialMedias, SocialMedia, RepositoryTitle,
+  RepositoryDescription, RepositoryContainer
+} from './styles'
 
 import api from '../../services/api'
 
@@ -800,6 +804,7 @@ export default class Main extends Component {
             <img alt="Foto do perfil do Github" src="https://avatars1.githubusercontent.com/u/6742811?s=400&u=08e0915ca288e05e885b4bde2193c5cc23d763c9&v=4" />
           </PictureBorder>
           <Title colorRnd={this.state.colorRnd}>Ricardo Colzani</Title>
+          <Subtitle>Desenvolvedor de soluções, principalmente para clínicas odontológicas</Subtitle>
           <SocialMedias>
             <SocialMedia href="https://www.linkedin.com/in/ricardocolzani/">
               <FaLinkedin />

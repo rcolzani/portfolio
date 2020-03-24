@@ -3,6 +3,14 @@ import styled from 'styled-components'
 const transitionTime = '700ms'
 const maxWidth = '720px'
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+`
 export const Title = styled.h1`
   font-size: 24px;
   color: #fff;
@@ -11,17 +19,14 @@ export const Title = styled.h1`
   border-bottom: solid 2px ${props => props.colorRnd};
 `;
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-
-  >span{
-    align-self: left;
-  }
+export const Subtitle = styled.span`
+  font-size: 14px;
+  max-width: 400px;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
 `
+
 export const PictureBorder = styled.div`
   display: flex;
   flex-shrink: 1;
@@ -35,7 +40,7 @@ export const PictureBorder = styled.div`
   img{
     border-radius: 20%;
     padding: 1px;
-    width: 250px;
+    width: 200px;
   }
 `;
 
