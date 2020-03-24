@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaDoorOpen, FaChevronRight } from 'react-icons/fa'
 import {
-  Title, Subtitle, Container, PictureBorder, RepositoryList,
+  Title, Subtitle, Container, PictureBorder, RepositoryList, RepositoryInfos,
   SocialMedias, SocialMedia, RepositoryTitle,
   RepositoryDescription, RepositoryContainer
 } from './styles'
@@ -804,7 +804,9 @@ export default class Main extends Component {
             <img alt="Foto do perfil do Github" src="https://avatars1.githubusercontent.com/u/6742811?s=400&u=08e0915ca288e05e885b4bde2193c5cc23d763c9&v=4" />
           </PictureBorder>
           <Title colorRnd={this.state.colorRnd}>Ricardo Colzani</Title>
-          <Subtitle>Desenvolvedor de soluções, principalmente para clínicas odontológicas</Subtitle>
+          <Subtitle>Desenvolvedor de soluções: VB.net, JavaScript, CSS, ReactJS, React Native, NodeJS...
+
+          </Subtitle>
           <SocialMedias>
             <SocialMedia href="https://www.linkedin.com/in/ricardocolzani/">
               <FaLinkedin />
@@ -820,8 +822,11 @@ export default class Main extends Component {
             <RepositoryList colorRnd={this.state.colorRnd}>
               {repositories.map(repository => (
                 <li key={repository.name}>
-                  <RepositoryTitle>{repository.name}</RepositoryTitle>
-                  <RepositoryDescription>{repository.description}</RepositoryDescription>
+                  <RepositoryInfos>
+                    <RepositoryTitle>{repository.name}</RepositoryTitle>
+                    <RepositoryDescription>{repository.description}</RepositoryDescription>
+                  </RepositoryInfos>
+                  <a href={repository.html_url}>Acessar <FaChevronRight /> </a>
                 </li>
               ))}
             </RepositoryList>

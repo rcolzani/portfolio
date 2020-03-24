@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const transitionTime = '700ms'
 const maxWidth = '720px'
+const backgroundtheme = '#121212';
 
 export const Container = styled.div`
   display: flex;
@@ -55,7 +56,7 @@ export const SocialMedia = styled.a`
   justify-content: center;
   align-items: center;
   margin-right: 15px;
-  width: 120px;
+  width: 130px;
   padding: 15px;
 
   text-decoration: none;
@@ -63,6 +64,7 @@ export const SocialMedia = styled.a`
   font-size: 40px;
   border-radius: 5px;
   transition: background-color 1s ease-out;
+  border: 1px solid #333;
 
   &:hover{
     background: #333;
@@ -70,7 +72,7 @@ export const SocialMedia = styled.a`
 
   span{
     font-size: 18px;
-    margin: 0 10px;
+    margin: 0;
   }
 `;
 
@@ -89,8 +91,9 @@ list-style: none;
 
 li  {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 15px ;
   margin: 15px;
   background: #333;
@@ -99,16 +102,48 @@ li  {
   border-radius: 5px;
   transition: border-color ${transitionTime} linear;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    a{
+      margin-top: 10px;
+    }
+  }
+
   a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-decoration: none;
+    color: #fff;
+      margin-left: 20px;
+      background: ${backgroundtheme};
+      padding: 10px;
+      border-radius: 5px;
+      min-width: 110px;
+
+      *{
+        font-size: 25px;
+      }
+
 
   }
 }
 `;
 
+export const RepositoryInfos = styled.div`
+   display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* justify-content: left; */
+  width: 100%;
+
+`
+
 export const RepositoryTitle = styled.span`
 font-size: 20px;
 margin-bottom:15px;
+
 `
 
 export const RepositoryDescription = styled.span`
