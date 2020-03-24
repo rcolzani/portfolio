@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const transitionTime = '700ms'
+const maxWidth = '720px'
 
 export const Title = styled.h1`
   font-size: 24px;
@@ -16,6 +17,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  >span{
+    align-self: left;
+  }
 `
 export const PictureBorder = styled.div`
   display: flex;
@@ -52,6 +57,7 @@ export const SocialMedia = styled.a`
   color: #fff;
   font-size: 40px;
   border-radius: 5px;
+  transition: background-color 1s ease-out;
 
   &:hover{
     background: #333;
@@ -63,15 +69,20 @@ export const SocialMedia = styled.a`
   }
 `;
 
-
-export const RepositoryList = styled.ul`
-list-style: none;
+export const RepositoryContainer = styled.div`
 margin-top: 30px;
 max-width: 720px;
 color: #fff;
 
-li{
+ > span{
+margin-left: 15px;
+ }
+`;
 
+export const RepositoryList = styled.ul`
+list-style: none;
+
+li  {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
