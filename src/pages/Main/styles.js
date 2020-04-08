@@ -3,6 +3,12 @@ import styled from 'styled-components'
 const transitionTime = '700ms'
 const maxWidth = '720px'
 const backgroundtheme = '#121212';
+const borderColor = "#333";
+const borderRadiusButton = '5px';
+
+export const BodyPage = styled.div`
+background: #121212;
+`
 
 export const Container = styled.div`
   display: flex;
@@ -10,6 +16,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
 
 `
 export const Title = styled.h1`
@@ -23,7 +30,6 @@ export const Title = styled.h1`
 export const Subtitle = styled.span`
   font-size: 14px;
   max-width: 400px;
-  color: #fff;
   margin-top: 10px;
   text-align: center;
 `
@@ -59,13 +65,11 @@ export const SocialMedia = styled.a`
   width: 130px;
   padding: 15px;
 
-  text-decoration: none;
   color: #fff;
   font-size: 40px;
-  border-radius: 5px;
-  transition: background-color 1s ease-out;
-  border: 1px solid #333;
-
+  border-radius: ${borderRadiusButton};
+  border: 1px solid ${borderColor};
+  transition: background-color 350ms ease-out;
   &:hover{
     background: #333;
   }
@@ -148,3 +152,39 @@ margin-bottom:15px;
 
 export const RepositoryDescription = styled.span`
 font-size: 14px;`
+
+
+export const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background: transparent;
+`
+
+export const Links = styled.div`
+  margin-top: 15px;
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: solid 1px #333;
+    border-radius: ${borderRadiusButton};
+    font-size: 40px;
+    padding: 15px;
+
+    transition: background-color 350ms ease-out;
+  &:hover{
+    background: #333;
+  }
+
+    span{
+      font-size: 16px;
+    }
+  }
+
+`

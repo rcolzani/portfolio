@@ -12,9 +12,32 @@ export default createGlobalStyle`
     min-height: 100%;
     font-family: Roboto , Arial, Helvetica, sans-serif;
   }
+  ul{
+    list-style:none;
+  }
+#root{
+  width: 100%;
+}
 
   body{
     background: #121212;
+    color: #fff;
     -webkit-font-smoothing: antialiased !important;
+    display: flex;
+    justify-content: center;
   }
+
+  a{
+    text-decoration: none;
+  }
+
+  button{
+    cursor:pointer;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 `;

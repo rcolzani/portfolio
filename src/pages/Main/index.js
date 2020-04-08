@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { FaGithub, FaLinkedin, FaDoorOpen, FaChevronRight } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaChevronRight, FaCalculator, FaPlus, FaBeer } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 import {
+  BodyPage,
   Title, Subtitle, Container, PictureBorder, RepositoryList, RepositoryInfos,
   SocialMedias, SocialMedia, RepositoryTitle,
-  RepositoryDescription, RepositoryContainer
+  RepositoryDescription, RepositoryContainer, Footer, Links
 } from './styles'
 
 import api from '../../services/api'
@@ -773,10 +775,16 @@ export default class Main extends Component {
     this.setState({
       repositories: response.data.sort((a, b) => a.created_at < b.created_at)
     })
+
+    this.myInterval = setInterval(() => {
+      console.log('teste');
+      this.setState({ colorRnd: this.randomColor() });
+    }, 7000)
+
   }
 
   async _onMouseMove(e) {
-    await this.setState({ colorRnd: this.randomColor() });
+    // this.setState({ colorRnd: this.randomColor() });
   }
 
   getIntegerRandom() {
@@ -798,8 +806,8 @@ export default class Main extends Component {
     const { repositories } = this.state;
 
     return (
-      <>
-        <Container className="App" onMouseMove={this._onMouseMove.bind(this)} >
+      <BodyPage colorRnd={this.state.colorRnd}>
+        <Container className="App"  >
           <PictureBorder colorRnd={this.state.colorRnd}>
             <img alt="Foto do perfil do Github" src="https://avatars1.githubusercontent.com/u/6742811?s=400&u=08e0915ca288e05e885b4bde2193c5cc23d763c9&v=4" />
           </PictureBorder>
@@ -832,7 +840,17 @@ export default class Main extends Component {
             </RepositoryList>
           </RepositoryContainer>
         </Container>
-      </>
+        <Footer>
+          <span>Desenvolvimentos</span>
+          <Links>
+            <Link to="/calculator">
+              <div><FaCalculator /><FaPlus /><FaBeer /></div>
+              <span>Calculador CxB</span>
+            </Link>
+          </Links>
+
+        </Footer>
+      </BodyPage>
     );
   }
 }
