@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 const transitionTime = '700ms'
 const maxWidth = '720px'
@@ -9,6 +9,16 @@ const borderRadiusButton = '5px';
 export const BodyPage = styled.div`
 background: #121212;
 `
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg)
+  }
+
+  to{
+    transform: rotate(360deg)
+  }
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -81,13 +91,31 @@ export const SocialMedia = styled.a`
 `;
 
 export const RepositoryContainer = styled.div`
+display: flex;
+flex-direction: column;
 margin-top: 30px;
 max-width: 720px;
 color: #fff;
+width: 100%;
 
  > span{
 margin-left: 15px;
  }
+
+#loadingrepos{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100%;
+  text-align: center;
+  height: 300px;
+
+  svg{
+    margin-left: 10px;
+    animation: ${rotate} 2s linear infinite;
+    }
+}
+
 `;
 
 export const RepositoryList = styled.ul`
@@ -161,6 +189,15 @@ export const Footer = styled.div`
   align-items: center;
   margin: 40px;
   background: transparent;
+
+  >span{
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 6px;
+    }
+  }
 `
 
 export const Links = styled.div`

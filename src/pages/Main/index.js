@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaGithub, FaLinkedin, FaChevronRight, FaCalculator, FaPlus, FaBeer } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaChevronRight, FaCalculator, FaPlus, FaBeer, FaSpinner, FaRegSurprise } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import {
   BodyPage,
@@ -766,10 +766,13 @@ export default class Main extends Component {
         "default_branch": "master"
       }
     ],
-    colorRnd: '#7159c1'
+    colorRnd: '#00b386',
+    easterEggCounter: 0
   };
 
   async componentDidMount() {
+    this.setState({ repositories: [] });
+
     const response = await api.get('/users/rcolzani/repos');
 
     this.setState({
@@ -803,12 +806,12 @@ export default class Main extends Component {
   }
 
   render() {
-    const { repositories } = this.state;
+    const { repositories, easterEggCounter } = this.state;
 
     return (
       <BodyPage colorRnd={this.state.colorRnd}>
         <Container className="App"  >
-          <PictureBorder colorRnd={this.state.colorRnd}>
+          <PictureBorder colorRnd={this.state.colorRnd} onClick={() => this.setState({ easterEggCounter: easterEggCounter + 1 })}>
             <img alt="Foto do perfil do Github" src="https://avatars1.githubusercontent.com/u/6742811?s=400&u=08e0915ca288e05e885b4bde2193c5cc23d763c9&v=4" />
           </PictureBorder>
           <Title colorRnd={this.state.colorRnd}>Ricardo Colzani</Title>
@@ -827,29 +830,33 @@ export default class Main extends Component {
           </SocialMedias>
           <RepositoryContainer>
             <span>Repositórios</span>
-            <RepositoryList colorRnd={this.state.colorRnd}>
-              {repositories.map(repository => (
-                <li key={repository.name}>
-                  <RepositoryInfos>
-                    <RepositoryTitle>{repository.name}</RepositoryTitle>
-                    <RepositoryDescription>{repository.description}</RepositoryDescription>
-                  </RepositoryInfos>
-                  <a href={repository.html_url}>Acessar <FaChevronRight /> </a>
-                </li>
-              ))}
-            </RepositoryList>
+            {repositories.length > 0 ?
+              <RepositoryList colorRnd={this.state.colorRnd}>
+                {repositories.map(repository => (
+                  <li key={repository.name}>
+                    <RepositoryInfos>
+                      <RepositoryTitle>{repository.name}</RepositoryTitle>
+                      <RepositoryDescription>{repository.description}</RepositoryDescription>
+                    </RepositoryInfos>
+                    <a href={repository.html_url}>Acessar <FaChevronRight /> </a>
+                  </li>
+                ))}
+              </RepositoryList>
+              : <span id="loadingrepos">Buscando repositórios no Github <FaSpinner color={this.state.colorRnd} size={50} /></span>}
           </RepositoryContainer>
         </Container>
-        <Footer>
-          <span>Desenvolvimentos</span>
-          <Links>
-            <Link to="/calculator">
-              <div><FaCalculator /><FaPlus /><FaBeer /></div>
-              <span>Calculador CxB</span>
-            </Link>
-          </Links>
+        {easterEggCounter >= 10 &&
+          <Footer>
+            <span>Surpriseeee!!! <FaRegSurprise size={35} /></span>
+            <Links>
+              <Link to="/calculator">
+                <div><FaCalculator /><FaPlus /><FaBeer /></div>
+                <span>Calculador CxB</span>
+              </Link>
+            </Links>
 
-        </Footer>
+          </Footer>
+        }
       </BodyPage>
     );
   }
