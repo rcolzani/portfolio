@@ -6,6 +6,12 @@ const backgroundtheme = '#121212';
 const borderColor = "#333";
 const borderRadiusButton = '5px';
 
+let fontSizeTitle = '1.8em';
+let fontSizeSubTitle = '1em';
+let fontSizeRepoTitle = '1.5em';
+let fontSizeRepoDescription = '1em';
+
+
 export const BodyPage = styled.div`
 background: #121212;
 `
@@ -30,7 +36,7 @@ export const Container = styled.div`
 
 `
 export const Title = styled.h1`
-  font-size: 24px;
+  font-size: ${fontSizeTitle};
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   transition: border-color ${transitionTime} linear;
@@ -38,7 +44,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.span`
-  font-size: 14px;
+  font-size: ${fontSizeSubTitle};
   max-width: 400px;
   margin-top: 10px;
   text-align: center;
@@ -173,13 +179,14 @@ export const RepositoryInfos = styled.div`
 `
 
 export const RepositoryTitle = styled.span`
-font-size: 20px;
+font-size: ${fontSizeRepoTitle};
 margin-bottom:15px;
 
 `
 
 export const RepositoryDescription = styled.span`
-font-size: 14px;`
+font-size: ${fontSizeRepoDescription};
+`
 
 
 export const Footer = styled.div`
