@@ -6,10 +6,10 @@ const backgroundtheme = '#121212';
 const borderColor = "#333";
 const borderRadiusButton = '5px';
 
-let fontSizeTitle = '1.8em';
-let fontSizeSubTitle = '1em';
-let fontSizeRepoTitle = '1.5em';
-let fontSizeRepoDescription = '1em';
+let fontSizeTitle = '1.6em';
+let fontSizeSubTitle = '0.8em';
+let fontSizeRepoTitle = '1.1em';
+let fontSizeRepoDescription = '0.8em';
 
 
 export const BodyPage = styled.div`
@@ -132,7 +132,7 @@ li  {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 15px ;
+  padding: 10px ;
   margin: 15px;
   background: #333;
   border-bottom: 2px solid  ${props => props.colorRnd};

@@ -10,7 +10,10 @@ export default createGlobalStyle`
 
   html, body, #root{
     min-height: 100%;
-    font-family: Roboto , Arial, Helvetica, sans-serif;
+    font-family:  Roboto,Arial, Helvetica, sans-serif;
+    text-rendering: optimizelegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    letter-spacing: 0.3px;
   }
   ul{
     list-style:none;
@@ -22,7 +25,6 @@ export default createGlobalStyle`
   body{
     background: #121212;
     color: #fff;
-    -webkit-font-smoothing: antialiased !important;
     display: flex;
     justify-content: center;
   }
