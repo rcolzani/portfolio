@@ -66,7 +66,7 @@ export default class Calculator extends Component {
         {/* <Construcao /> */}
         <Container>
           <h1>Comparador de preços de bebidas</h1>
-          <Subtitulo mostrar={CompareItems.length <= 0}>Fácil, rápido e intuitivo <span>&#128525;&#128516;🍻</span> </Subtitulo>
+          <Subtitulo mostrar={CompareItems.length <= 0}>Fácil, rápido e intuitivo <span role="img" aria-label="emoji de felicidade e de caneco que chope">&#128525;&#128516;🍻</span> </Subtitulo>
           <span>Clique para adicionar os itens para comparação</span>
           <Botoes>
             {botoes.map(botao => (
@@ -102,7 +102,7 @@ export default class Calculator extends Component {
               <li>
                 <span >{item.type} - {item.description}</span>
                 <span class="itemPrice">{formatPrice(item.price)}</span>
-                <span class="itemPercent">{CompareResult.indexOf(item) == 0 ? 'Mais barato' : item.percentual.toFixed(2) + " %"}</span>
+                <span class="itemPercent">{CompareResult.indexOf(item) === 0 ? 'Mais barato' : item.percentual.toFixed(2) + " %"}</span>
               </li>
             ))}
           </Result>

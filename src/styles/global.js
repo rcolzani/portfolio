@@ -9,6 +9,7 @@ export default createGlobalStyle`
   }
 
   html, body, #root{
+    height: 100%;
     min-height: 100%;
     font-family:  Roboto,Arial, Helvetica, sans-serif;
     text-rendering: optimizelegibility !important;
