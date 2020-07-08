@@ -1,7 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { buttonRadius } from '../../components/GenericStyles/styles'
+import styled from "styled-components";
 
-const background1 = "#fff";
 const background2 = "#262626";
 const fontcolor1 = "#262626";
 const fontcolor2 = "#fff";

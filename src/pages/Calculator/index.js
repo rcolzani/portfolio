@@ -3,8 +3,6 @@ import produce from 'immer';
 import { formatPrice } from '../../util/format';
 import { Container, Subtitulo, ListaItens, ListaItem, Botoes, CustomSize, Result } from './styles';
 
-import Construcao from '../../components/Construcao';
-
 export default class Calculator extends Component {
   state = {
     customButtonSize: 0,

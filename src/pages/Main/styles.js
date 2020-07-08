@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components'
-import backgroundImage from '../../assests/images/background.jpg';
+// import backgroundImage from '../../assests/images/background.jpg';
 
 const transitionTime = '700ms'
-const maxWidth = '720px'
+// const maxWidth = '720px'
 const backgroundtheme = '#121212';
 const borderColor = "#333";
 const borderRadiusButton = '5px';
@@ -10,7 +10,7 @@ const borderRadiusButton = '5px';
 let fontSizeTitle = '32px';
 let fontSizeSubTitle = '18px';
 let fontSizeRepoTitle = '20px';
-let fontSizeRepoDescription = '16px';
+let fontSizeRepoDescription = '14px';
 
 
 export const BodyPage = styled.div`
@@ -58,7 +58,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.span`
   font-size: ${fontSizeSubTitle};
   max-width: 400px;
-  margin-top: 10px;
+  margin-top: 40px;
   text-align: center;
 `
 
@@ -68,14 +68,14 @@ export const PictureBorder = styled.div`
 
   background-color: ${props => props.colorRnd} ;
   padding: 5px;
-  border-radius: 20%;
+  border-radius: 50%;
   transition: background-color ${transitionTime} linear;
   margin: 25px;
 
   img{
-    border-radius: 20%;
+    border-radius: 50%;
     padding: 1px;
-    width: 200px;
+    width: 300px;
   }
 `;
 
@@ -174,6 +174,7 @@ li  {
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
+
     color: #fff;
       margin-left: 20px;
       background: ${backgroundtheme};
@@ -196,9 +197,7 @@ export const RepositoryInfos = styled.div`
   /* align-items: flex-start; */
   /* justify-content: left; */
   width: 100%;
-
 `
-
 export const RepositoryTitle = styled.span`
 font-size: ${fontSizeRepoTitle};
 margin-bottom:15px;
@@ -207,7 +206,10 @@ margin-bottom:15px;
 
 export const RepositoryDescription = styled.span`
 font-size: ${fontSizeRepoDescription};
-color: #aaa
+color: #fff;
+overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `
 
 

@@ -840,7 +840,7 @@ export default class Main extends Component {
                   <li key={repository.name}>
                     <RepositoryInfos>
                       <RepositoryTitle>{repository.name}</RepositoryTitle>
-                      <RepositoryDescription>{repository.description}</RepositoryDescription>
+                      <RepositoryDescription>{new Date(repository.updated_at).toLocaleDateString('pt-BR', { dateStyle: "short", timeStyle: "medium" })}</RepositoryDescription>
                     </RepositoryInfos>
                     <a href={repository.html_url}>Acessar <FaChevronRight /> </a>
                   </li>
