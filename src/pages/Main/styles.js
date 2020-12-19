@@ -14,9 +14,12 @@ let fontSizeRepoDescription = '14px';
 
 
 export const BodyPage = styled.div`
+/* display: flex; */
+/* flex-direction: column; */
 background: ${backgroundtheme};
 height: 100%;
  min-height: 100%;
+  padding-bottom: 30px;
 `
 
 const rotate = keyframes`
@@ -31,13 +34,13 @@ const rotate = keyframes`
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   height: 100%;
   width: 100%;
-
+  padding-bottom: 30px;
 `
 export const Profile = styled.div`
 display: flex;
@@ -108,14 +111,17 @@ export const SocialMedia = styled.a`
   }
 `;
 
-export const RepositoryContainer = styled.div`
+export const GithubContainer = styled.div`
 display: flex;
 flex-direction: column;
 margin-top: 30px;
 max-width: 720px;
 color: #fff;
 width: 100%;
-
+ > h2{
+   text-align: center;
+   margin-bottom: 20px;
+ }
  > span{
 margin-left: 15px;
  }
@@ -212,8 +218,17 @@ overflow: hidden;
   white-space: nowrap;
 `
 
+export const GithubStats = styled.div`
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+  > img{
+    max-width: 350px;
+  }
+`
 
-export const Footer = styled.div`
+export const Easteregg = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,5 +269,9 @@ a {
       font-size: 16px;
     }
   }
+
+`
+
+export const Footer = styled.div`
 
 `
