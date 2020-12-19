@@ -6,7 +6,7 @@ import {
   BodyPage,
   Title, Subtitle, Container, Profile, PictureBorder, RepositoryList, RepositoryInfos,
   SocialMedias, SocialMedia, RepositoryTitle,
-  RepositoryDescription, GithubContainer, GithubStats, Easteregg, Links, LoadingContainer, Footer
+  RepositoryDescription, GithubContainer, GithubStats, Easteregg, Links, LoadingContainer
 } from './styles'
 
 import api from '../../services/api'
@@ -116,8 +116,8 @@ export default class Main extends Component {
                 />
               </LoadingContainer>}
             <GithubStats>
-              <img src="https://github-readme-stats.vercel.app/api?username=rcolzani&show_icons=true&theme=dark" />
-              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rcolzani&layout=compact&theme=dark" />
+              <img alt="github stats" src="https://github-readme-stats.vercel.app/api?username=rcolzani&show_icons=true&theme=dark" />
+              <img alt="github linguagens mais utilizadas" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rcolzani&layout=compact&theme=dark" />
               {/* <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rcolzani&theme=dark" /> */}
 
             </GithubStats>
