@@ -10,6 +10,8 @@ export default function Routes() {
   useEffect(() => {
     const trackingId = "G-RXJQKXQNK1"; // Replace with your Google Analytics tracking ID
     ReactGA.initialize(trackingId);
+    console.log('google analytics ok')
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
 
