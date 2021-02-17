@@ -5,11 +5,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Main from './pages/Main';
 import Calculator from './pages/Calculator';
 
+ReactGA.initialize("G-RXJQKXQNK1");
+
 export default function Routes() {
 
   useEffect(() => {
-    const trackingId = "G-RXJQKXQNK1"; // Replace with your Google Analytics tracking ID
-    ReactGA.initialize(trackingId);
     console.log('google analytics ok')
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
