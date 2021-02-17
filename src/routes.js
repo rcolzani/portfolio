@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
 import Calculator from './pages/Calculator';
+
+import ReactGA from 'react-ga';
 
 ReactGA.initialize("G-RXJQKXQNK1");
 
