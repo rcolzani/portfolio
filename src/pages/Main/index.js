@@ -5,7 +5,7 @@ import Typical from 'react-typical'
 import {
   BodyPage,
   Title, Subtitle, Container, Profile, PictureBorder, RepositoryList, RepositoryInfos,
-  SocialMedias, SocialMedia, RepositoryTitle,
+  SocialMedias, SocialMedia, RepositoryTitle, Skills,
   RepositoryDescription, GithubContainer, GithubStats, Easteregg, Links, LoadingContainer
 } from './styles'
 
@@ -65,9 +65,6 @@ export default class Main extends Component {
               <img alt="Foto perfil do Github" src={this.state.profilePicture} />
             </PictureBorder>
             <Title colorRnd={this.state.colorRnd}>Ricardo Colzani</Title>
-            <Subtitle>Apaixonado por tecnologia <FaHeart color={this.state.colorRnd} /> e desenvolvedor de soluções: VB.net, JavaScript, CSS, ReactJS, React Native, NodeJS...
-
-          </Subtitle>
             <SocialMedias>
               <SocialMedia href="https://www.linkedin.com/in/ricardocolzani/">
                 <FaLinkedin />
@@ -78,6 +75,23 @@ export default class Main extends Component {
                 <span>/rcolzani</span>
               </SocialMedia>
             </SocialMedias>
+            <Subtitle>Apaixonado por tecnologia <FaHeart color={this.state.colorRnd} /> e desenvolvedor de soluções que facilitem a vida das pessoas.
+              <Skills colorRnd={this.state.colorRnd}>
+                <p>Skills:</p>
+                <span>C#</span>
+                <span>VB.net</span>
+                <span>.NET Core</span>
+                <span>.NET Framework</span>
+                <span>Entity Framework</span>
+                <span>MSSQL Server</span>
+                <span>JavaScript</span>
+                <span>CSS</span>
+                <span>ReactJS</span>
+                <span>Git</span>
+                <span>NodeJS</span>
+                <span>VB6</span>
+              </Skills>
+            </Subtitle>
             {easterEggCounter >= 10 &&
               <Easteregg>
                 <span>Surpriseeee!!! <FaRegSurprise size={35} /></span>

@@ -64,6 +64,21 @@ export const Subtitle = styled.span`
   margin-top: 40px;
   text-align: center;
 `
+export const Skills = styled.div`
+margin-top: 30px;
+display: flex;
+justify-content:center;
+flex-wrap: wrap;
+  width: 400px;
+
+  span {
+    margin: 5px 15px;
+    padding: 5px 10px;
+    border-bottom: 1px solid ${props => props.colorRnd};
+  }
+
+`
+
 
 export const PictureBorder = styled.div`
   display: flex;
@@ -84,7 +99,7 @@ export const PictureBorder = styled.div`
 
 export const SocialMedias = styled.div`
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 30px;
 `
 export const SocialMedia = styled.a`
@@ -92,7 +107,7 @@ export const SocialMedia = styled.a`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+  margin: 0 5px;
   width: 130px;
   padding: 15px;
 
