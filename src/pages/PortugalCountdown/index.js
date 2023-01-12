@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    MainBody, CountdownSpan, BodyPage, CountdownContainer, CountdownSpanDay,
+    MainBody, BodyPage, CountdownContainer, CountdownSpanDay,
     CountdownSpanHour, CountdownSpanMinute, CountdownSpanSecond,
     CloudPiece, AxisX1, AxisX2, AxisX3, AxisX4, AxisX5
 } from './styles';
@@ -58,7 +58,7 @@ export default class PortugalCountdown extends Component {
             <>
                 <BodyPage>
                     <AxisX1>
-                        <img src={backgroundImage}></img>
+                        <img src={backgroundImage} alt="airplane icon"></img>
                     </AxisX1>
                     <AxisX2>
                         <CloudPiece />
@@ -75,7 +75,7 @@ export default class PortugalCountdown extends Component {
                 </BodyPage>
                 <MainBody>
                     <CountdownContainer>
-                        <img src={portugalFlag} width="150"></img>
+                        <img src={portugalFlag} width="150" alt="portugal flag"></img>
 
                         <CountdownSpanDay>{countdownDays} dias</CountdownSpanDay>
                         <CountdownSpanHour>{countdownHours} horas</CountdownSpanHour>
