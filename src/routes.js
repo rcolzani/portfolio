@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Main from './pages/Main';
 import Calculator from './pages/Calculator';
+import PortugalCountdown from './pages/PortugalCountdown';
 
 import ReactGA from 'react-ga';
 
@@ -21,6 +22,7 @@ export default function Routes() {
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/calculator" component={Calculator} />
+        <Route path="/portugal-herewego" component={PortugalCountdown} />
       </Switch>
     </BrowserRouter>
   );
